@@ -8,7 +8,8 @@ function createLibrary(name) {
     },
   }
 };
-
+/*
+//Original function, stopped using for...in and made a for loop
 function addBook(library, book) {
   for (var key in library.shelves) {
     if (key == book.genre) {
@@ -16,6 +17,15 @@ function addBook(library, book) {
     }
   }
 };
+*/
+
+function addBook(library, book) {
+  for (i = 0; i < (Object.keys(library.shelves).length); i++) {
+    if (book.genre === (Object.keys(library.shelves)[i])) {
+      library.shelves[(Object.keys(library.shelves)[i])].push(book)
+    }
+  }
+}
 
 function checkoutBook(library, book, genre) {
   for (i = 0; i < library.shelves[genre].length; i++) {
