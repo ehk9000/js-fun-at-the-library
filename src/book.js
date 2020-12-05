@@ -17,7 +17,7 @@ function saveReview(review, array) {
     for (i = 0; i < array.length; i++) {
       if (array[i] === review) {
         break;
-      } else if (i == (array.length-1) && array[i] != review) {
+      } else if (i === (array.length-1) && array[i] != review) {
         array.push(review);
       }
     }
