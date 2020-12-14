@@ -26,6 +26,7 @@ function addBook(library, book) {
     }
   }
 }
+// can pull out Object.keys(library.shelves into variable. Is there a way to refactor using bracket notation and not object.keys? 
 
 function checkoutBook(library, book, genre) {
   for (i = 0; i < library.shelves[genre].length; i++) {

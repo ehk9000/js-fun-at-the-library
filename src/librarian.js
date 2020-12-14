@@ -6,6 +6,7 @@ class Librarian {
 
   greetPatron(name, morning) {
     if (morning === true) {
+      // can be refactored to if (morning)
       return `Good morning, ${name}!`
     } else {
       return `Hello, ${name}!`
@@ -25,6 +26,7 @@ class Librarian {
       }
     }
   };
+  // Object.keys(this.library.shelves) is busy - can assign to variable to clean up a bit. nice job with nested for loop
 
   calculateLateFee(num) {
     return Math.ceil(num * 0.25)
